@@ -3,60 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTE Capstone Design Log</title>
+    <title>Interforce | MTE Capstone</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>MTE Capstone Design Log</h1>
+
+    <nav>
+        <div class="logo">INTERFORCE</div>
+        <ul class="nav-links">
+            <li><a href="#about" class="active">Project</a></li>
+            <li><a href="#specs">Technical</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="logs.html" class="highlight-link">Design Logs</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Haptic Tele-operation</h1>
+            <p>Democratizing Robot-Assisted Minimally Invasive Surgery Training.</p>
+            <div class="hero-stats">
+                <span>6-DOF Feedback</span>
+                <span>Hybrid Kinematics</span>
+                <span>Custom FOC Driver</span>
+            </div>
+            <a href="#about" class="btn">View Project</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/model.png" alt="Interforce CAD Model">
+        </div>
     </header>
 
-    <main>
-        <section class="log-entry">
-            <h2> January 2026 </h2>
-            <ul>
-                <li><strong>January 12th 2026 - (Group):</strong> Completed Robohub online training + meeting to discuss using Robohub resources</li>
-                <li><strong>January 12th 2026 - (Group):</strong> Contacted Robohub to enquire about using their resources</li>
-                <li><strong>January 9th 2026 - (Group):</strong> Meeting to discuss next steps</li>
-            </ul>
-            
-            <h2> November 2025 </h2>
-            <ul>
-                <li><strong>9th November 2025 - (Fayiz):</strong> Started working on Final Design Presentation</li>
-                <li><strong>7th November 2025 - (Douglas):</strong> Finalized Preliminary PCB Layout</li>
-                <li><strong>1st November 2025 - (Sejune):</strong> Gimbal motor selection + detailed gimbal link design</li>
-                <li><strong>1st-3rd November 2025 - (Group):</strong> Worked on Component Design/Schematics</li>
-            </ul>
-            <h2> October 2025 </h2>
-            <ul>
-                <li><strong>28th October 2025 - (Douglas):</strong> Completed preliminary circuit and PCB layout designs</li>
-                <li><strong>24th October 2025 - (Douglas):</strong> Performed basic workspace and kinematic analysis of translation stage</li>
-                <li><strong>20th October 2025 - (Group):</strong> PDP presentation</li>
-                <li><strong>9th October 2025 - (Group):</strong> Attended Baylis Medical Stakeholder Cafe</li>
-                <li><strong>6th-20th October 2025 - (Group):</strong> Continued working on PDP presentation</li>
-                <li><strong>4th October 2025 - (Fayiz):</strong> Started work on PDP presentation</li>
-                <li><strong>4th October 2025 - (Sejune):</strong> Excel sheet comparing commercial/research-driven haptic devices</li>
-            </ul>
-            <h2>September 2025</h2>
-            <ul>
-                <li><strong>28th September 2025 - (Fayiz):</strong> Research about Intellijoint/Intuitive + brainstorm stakeholder cafe questions</li>
-                <li><strong>24th September 2025 - (Group):</strong> Baylis Medical Workshop</li> 
-                <li><strong>21th September 2025 - (Group):</strong> Contacted Professor Schneider to discuss haptic feedback in relation to the project</li>
-                <li><strong>21st September 2025 - (Group):</strong> Meeting to discuss needs statement, criteria, constraints</li>
-                <li><strong>17th September 2025 - (Fayiz):</strong> Research stuff about simulation environment feasability</li>
-                <li><strong>14th September 2025 - (Sejune):</strong> Research Existing Haptic Devices & Flesh out need analysis/problem statement
-                 <ul>
-                    <li>Updated need statement: focus on the need for a low-cost, accessible form of haptic feedback interface in surgical robots for training, educational and research purposes.</li>
-                    <li>Updated problem statement: design a haptic device to combat the need</li>
-                    <li>Looked into haptic device research; different mechanisms are used to achieve 6DOF (series, parallel, hybrid, delta, Stewart-Gough)</li>
-                  </ul>
-                </li>
-                <li><strong>14th September 2025 - (Fayiz):</strong> Set up website</li>
-                <li><strong>12th September 2025 - (Seth):</strong> Applied to Baylis Medtech Stakeholder Cafe</li>
-                <li><strong>11th September 2025 - (Group):</strong> Meeting to discuss ideas</li>
-                <li><strong>8th September 2025 - (Group):</strong> First meeting with profs</li>
-            </ul>
-        </section>
-    </main>
+    <section id="about" class="container">
+        <div class="section-header">
+            <h2>The Mission</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="about-grid">
+            <div class="text-block">
+                <h3>The Problem</h3>
+                <p>
+                    Robot-Assisted Minimally Invasive Surgery (RMIS) is hindered by a significant training gap. Commercial haptic simulators are prohibitively expensive and mechanically complex, limiting availability to well-funded institutions.
+                </p>
+                <h3>The Solution</h3>
+                <p>
+                    <strong>Interforce</strong> is a low-cost, 6-Degree-of-Freedom (DOF) haptic interface designed to bridge this gap. By measuring forces applied by the robot’s manipulator and applying opposing counter-forces upon the user, the sensation of force-feedback is realized. Through the Interforce system, an operator is able to “feel” what forces the robot is applying, allowing for a more natural connection and a greater depth in control.
+                </p>
+            </div>
+            <div class="video-block">
+                <video controls poster="images/20260116_195413.jpg">
+                    <source src="images/20251207_004640.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Prototype Phase: Initial Motor & Driver Test</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Architecture</h2>
+                <div class="divider accent"></div>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <h3>Kinematics</h3>
+                    <p>Uses a hybrid architecture coupling a 3-DOF quasi-serial manipulator for translation with a decoupled 3-DOF spherical wrist.</p>
+                </div>
+                <div class="spec-card">
+                    <h3>Electronics</h3>
+                    <p>Custom-designed Field-Oriented Control (FOC) driver system based on the TMC9660 IC.</p>
+                </div>
+                <div class="spec-card">
+                    <h3>Impact</h3>
+                    <p>Designed to replicate the kinematics of industry-standard tools like the da Vinci Master Tool Manipulator at a fraction of the cost (~$2000) and with High-Fidelity Haptics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="container">
+        <div class="section-header">
+            <h2>Development Gallery</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="gallery-grid">
+            <div class="card">
+                <img src="images/PCB.png" alt="PCB Design">
+                <div class="card-info">
+                    <h4>Custom PCB Design</h4>
+                    <p>KiCad layout for the TMC9660 Driver Board.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/20251124_160514.jpg" alt="Mechanical Parts">
+                <div class="card-info">
+                    <h4>Rapid Prototyping</h4>
+                    <p>3D printed mechanical linkages.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/20260103_040355.jpg" alt="Reflow Soldering">
+                <div class="card-info">
+                    <h4>Manufacturing</h4>
+                    <p>Assembly of driver boards.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/20260116_195413.jpg" alt="Bench Testing">
+                <div class="card-info">
+                    <h4>Integration</h4>
+                    <p>Stepper motor integration and electronic validation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Team</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="team-wrapper">
+                <div class="team-photo-container">
+                    <img src="images/MTE_Group38_Interforce_Brochure_Photo.JPG" alt="Interforce Team" class="team-photo">
+                </div>
+                <div class="team-roles">
+                    <div class="role-card">
+                        <h4>Seth Winton</h4>
+                        <span>Embedded Systems</span>
+                        <p>Low-level firmware, real-time control loops, and safety limits.</p>
+                    </div>
+                    <div class="role-card">
+                        <h4>Douglas House</h4>
+                        <span>Electrical Lead</span>
+                        <p>Custom TMC9660 driver PCB design and power bus analysis.</p>
+                    </div>
+                    <div class="role-card">
+                        <h4>Fayiz Ahmed Mohideen</h4>
+                        <span>Software & Simulation</span>
+                        <p>Host-side interfacing and haptic force translation.</p>
+                    </div>
+                    <div class="role-card">
+                        <h4>Sejune Chang</h4>
+                        <span>Mechanical Lead</span>
+                        <p>Hybrid kinematic architecture, stiffness modeling, and mechanical design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Interforce Capstone Project. University of Waterloo.</p>
+    </footer>
+
 </body>
 </html>
